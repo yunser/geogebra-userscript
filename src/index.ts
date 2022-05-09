@@ -1,20 +1,15 @@
 // console.log('yunser-geogebra userscript load')
 
 window.addEventListener('keydown', e => {
-    // console.log('mousedown', e.code, e)
-    // console.log('activeElement', document.activeElement.nodeName)
-    // console.log('flow 0')
     if (e.code == 'KeyZ' && e.metaKey) {
-        // console.log('flow 1')
         if (document.activeElement.nodeName != 'INPUT' && document.activeElement.nodeName != 'TEXTAREA') {
-            // console.log('flow 2')
+            // 方法 1，利用网站暴露的全局变量和方法
             unsafeWindow.ggbApplet.undo()
 
-            // 方法 2
+            // 方法 2，模拟点击
             // document.querySelector('button[aria-label="撤消"]')?.click()
-            // document.querySelector('[data-filter-id="56"]')?.click()
 
-            // 方法 3
+            // 方法 3，利用事件来模拟点击
             // const undoElem = document.querySelector('button[aria-label="撤消"]')
             // const event = new Event('click');
             // undoElem.dispatchEvent(event);

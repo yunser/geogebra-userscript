@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "vite": "^2.9.8",
+        "vite-plugin-monkey": "^0.2.11",
+        "vite-plugin-restart": "^0.1.1"
+    }
+}
